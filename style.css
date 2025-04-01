@@ -1,0 +1,80 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-family: Open Sans, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sketchfab {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.label {
+  height: 125px;
+  padding: 6px;
+  background-color: #efefef;
+  line-height: 1.2; /* Zwiększa odstęp między liniami tekstu */
+}
+
+/* Styl dla nieaktywnego (niepodświetlonego) przycisku */
+button {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+  margin-bottom: 5px; /* Dopasowane przez Ciebie */
+}
+
+/* Styl dla aktywnego (podświetlonego) przycisku */
+button.active {
+  background-color: #ecb120; /* Kolor tła dla aktywnego przycisku */
+  color: white; /* Kolor tekstu dla aktywnego przycisku */
+  font-weight: bold; /* Pogrubiona czcionka */
+  border: 1px solid #ecb120;
+}
+
+/* Styl dla nieaktywnych przycisków */
+button.disabled {
+  background-color: #c6c6c6;
+  color: #7b7b7b;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Efekt hover, ale tylko dla urządzeń, które wspierają hover (np. komputery) */
+@media (hover: hover) {
+  button:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+/* Opcjonalnie dodaj efekt hover dla nieaktywnych przycisków */
+button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Zwiększenie odstępów między elementami tekstu */
+p, span {
+  line-height: 1.2; /* Zwiększa odstęp między wierszami tekstu */
+}
